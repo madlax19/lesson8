@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xBG-WI-KKb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Menu-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoBit" translatesAutoresizingMaskIntoConstraints="NO" id="SID-K0-P0x">
+                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0039215688589999999" green="0.61568629740000003" blue="0.83921575550000005" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="SID-K0-P0x" secondAttribute="trailing" id="3mK-8f-AGr"/>
+                            <constraint firstItem="SID-K0-P0x" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="D54-Lb-Tza"/>
+                            <constraint firstItem="SID-K0-P0x" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Pbb-Ko-V8U"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SID-K0-P0x" secondAttribute="bottom" id="RI2-ol-nvH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Menu" id="IOa-iK-9Ng">
+                        <barButtonItem key="rightBarButtonItem" title="Proceed" id="jsz-uw-ZvV">
+                            <connections>
+                                <segue destination="YQ4-qJ-RPX" kind="show" identifier="option1" id="dDx-cH-cOH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1297.5" y="321"/>
+        </scene>
+        <!--Option 1-->
+        <scene sceneID="Eyy-AX-SbC">
+            <objects>
+                <viewController title="Option 1" id="YQ4-qJ-RPX" customClass="Option1ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KNj-7y-Q3q"/>
+                        <viewControllerLayoutGuide type="bottom" id="pAt-5K-rGA"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="MRa-pO-wKh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoBit" translatesAutoresizingMaskIntoConstraints="NO" id="0Oy-0B-dPh">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0039215688589999999" green="0.61568629740000003" blue="0.83921575550000005" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="pAt-5K-rGA" firstAttribute="top" secondItem="0Oy-0B-dPh" secondAttribute="bottom" id="AJf-jC-uJz"/>
+                            <constraint firstItem="0Oy-0B-dPh" firstAttribute="top" secondItem="KNj-7y-Q3q" secondAttribute="bottom" id="Tln-qR-axO"/>
+                            <constraint firstItem="0Oy-0B-dPh" firstAttribute="leading" secondItem="MRa-pO-wKh" secondAttribute="leadingMargin" id="omx-8R-r3C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Oy-0B-dPh" secondAttribute="trailing" id="s1W-CW-D2I"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Option 1" id="8jB-3j-oh0">
+                        <barButtonItem key="rightBarButtonItem" title="Proceed" id="jmn-jY-BbP">
+                            <connections>
+                                <segue destination="Fgx-rp-bg0" kind="show" identifier="option2" id="s5W-Qc-GMg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yzp-Ou-Wdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2155.5" y="321"/>
+        </scene>
+        <!--Option 2-->
+        <scene sceneID="mQS-Rb-OCm">
+            <objects>
+                <viewController title="Option 2" id="Fgx-rp-bg0" customClass="Option2ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lna-x1-ck4"/>
+                        <viewControllerLayoutGuide type="bottom" id="dTA-dU-nnA"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="OPM-Yv-17W">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoBit" translatesAutoresizingMaskIntoConstraints="NO" id="FAZ-lb-baj">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="416" height="600"/>
+                                </variation>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j9j-Mm-N19">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentSelected:" destination="Fgx-rp-bg0" eventType="valueChanged" id="2B7-FX-7HM"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0039215688589999999" green="0.61568629740000003" blue="0.83921575550000005" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="j9j-Mm-N19" firstAttribute="centerX" secondItem="OPM-Yv-17W" secondAttribute="centerX" id="7NT-R8-QVt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FAZ-lb-baj" secondAttribute="trailing" id="CrB-mR-0Hi"/>
+                            <constraint firstItem="dTA-dU-nnA" firstAttribute="top" secondItem="FAZ-lb-baj" secondAttribute="bottom" id="IJ3-89-gvy"/>
+                            <constraint firstItem="j9j-Mm-N19" firstAttribute="leading" secondItem="OPM-Yv-17W" secondAttribute="leadingMargin" constant="67" id="Jn4-Xa-yVc"/>
+                            <constraint firstItem="FAZ-lb-baj" firstAttribute="leading" secondItem="OPM-Yv-17W" secondAttribute="leadingMargin" id="lc5-3N-mNr"/>
+                            <constraint firstItem="j9j-Mm-N19" firstAttribute="top" secondItem="lna-x1-ck4" secondAttribute="bottom" constant="68" id="pN8-q4-baX"/>
+                            <constraint firstItem="FAZ-lb-baj" firstAttribute="top" secondItem="lna-x1-ck4" secondAttribute="bottom" id="sN5-EI-thc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="j9j-Mm-N19"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7NT-R8-QVt"/>
+                                <exclude reference="Jn4-Xa-yVc"/>
+                                <exclude reference="pN8-q4-baX"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="j9j-Mm-N19"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7NT-R8-QVt"/>
+                                <include reference="Jn4-Xa-yVc"/>
+                                <include reference="pN8-q4-baX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="j9j-Mm-N19" id="UOr-rf-FuK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nxs-hs-Ihx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2973" y="321"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wJF-0l-oeC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xBG-WI-KKb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U2o-MV-LrX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="61a-Tk-CGw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bm2-k3-csK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="427.5" y="321"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logoBit" width="390" height="306"/>
+    </resources>
+</document>
