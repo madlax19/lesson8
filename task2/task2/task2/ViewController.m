@@ -11,6 +11,7 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (nonatomic, strong) NSMutableArray *fontsList;
 
 @end
 
@@ -18,23 +19,36 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.fontsList = [NSMutableArray array];
+    
+    for (id familyName in [UIFont familyNames]) {
+        for (id fontName in [UIFont fontNamesForFamilyName:familyName])
+            [self.fontsList addObject:fontName];
+    }
 	
-	
+}
+
+- (UIColor*) randomColor{
+    CGFloat red = (CGFloat)arc4random_uniform(255) / 255.0;
+    CGFloat green = (CGFloat)arc4random_uniform(255) / 255.0;
+    CGFloat blue = (CGFloat)arc4random_uniform(255) / 255.0;
+    
+    return [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
 }
 
 - (IBAction) addButtonTapped:(id)sender {
 	NSString* stringTemplate = @"Random styled paragraph skjdf jksfjksfksjkf sldkfj klsjfkl sjlfjskldjfkl sjlfjs lkdfjkls jdfskj";
+    NSString *fontName = [self.fontsList objectAtIndex:arc4random_uniform(self.fontsList.count)];
 	NSMutableAttributedString *paragraphContent = [[NSMutableAttributedString alloc]
 												   initWithString:stringTemplate
 												   attributes:@{
-																NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:arc4random_uniform(20)],
-																NSForegroundColorAttributeName: [UIColor grayColor]
+																NSFontAttributeName: [UIFont fontWithName: fontName size:arc4random_uniform(20)],
+                                                                NSForegroundColorAttributeName: [self randomColor]
 																}];
 	NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
-	paragraph.alignment = NSTextAlignmentRight;
-	paragraph.lineSpacing = 10;
-	paragraph.lineBreakMode = NSLineBreakByCharWrapping;
+	paragraph.alignment = (NSTextAlignment)arc4random_uniform(5);
+	paragraph.lineSpacing = arc4random_uniform(15);
+	paragraph.lineBreakMode = (NSLineBreakMode)arc4random_uniform(6);
 	
 	[paragraphContent addAttribute:NSParagraphStyleAttributeName value:paragraph range:NSMakeRange(0, 1)];
 	NSAttributedString *lineBreak = [[NSAttributedString alloc] initWithString:@"\n" attributes:nil];
@@ -46,9 +60,19 @@
 	self.textLabel.attributedText = labelContent;
 }
 
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+- (IBAction)clearButtonTouch:(id)sender {
+    self.textLabel.text = nil;
+}
+
+- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        self.textLabel.text = self.textLabel.text;
+    } else {
+        NSAttributedString *text = [[NSAttributedString alloc] initWithString:[self.textLabel.text substringToIndex:199] attributes:@{
+                                                                                                                                      NSStrikethroughStyleAttributeName: @1
+                                                                                                                                      }];
+        self.textLabel.attributedText = text;
+    }
 }
 
 @end
