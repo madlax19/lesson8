@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ResultViewController : UIViewController
+@property (nonatomic, assign) NSAttributedString *resultString;
 
 @end

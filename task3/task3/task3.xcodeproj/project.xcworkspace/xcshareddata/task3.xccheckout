@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>87BEFA5C-843B-4694-AFF6-99B667A020F7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>task3</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>AF5142D021AA90D2B71B4119C2BA0FB0831CA33A</key>
 		<string>https://github.com/madlax19/lesson8.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>task3/task3/task3.xcodeproj/project.xcworkspace</string>
+	<string>task3/task3/task3.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>AF5142D021AA90D2B71B4119C2BA0FB0831CA33A</key>
